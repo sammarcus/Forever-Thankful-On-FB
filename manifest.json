@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Forever Thankful on FB",
+  "description": "Chrome extension that brings back the thankful reaction because every day is a day for thanks.",
+  "version": "1.0.0",
+  "permissions": [
+    "*://*.facebook.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "run_at": "document_start",
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "hook.js"
+  ],
+  "icons": { "16": "icon-16.png", "128": "icon-128.png" }
+}
